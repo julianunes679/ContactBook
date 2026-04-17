@@ -12,7 +12,21 @@ def contact_menu(agenda):
         option = input("Escolha uma opção: ")
 
         if option == "1":
-            print("adicionar novo contato")
+            name = input("Digite o nome: ")
+            phone = input("Digite o telefone: ")
+            email = input("Digite o email: ")
+
+            contact = {
+                "name": name,
+                "phone": phone,
+                "email": email,
+                "favorite": False
+            }
+
+            agenda.append(contact)
+
+            print("Contato adicionado com sucesso!")
+
 
         elif option == "2":
             print ("Editar contato")
